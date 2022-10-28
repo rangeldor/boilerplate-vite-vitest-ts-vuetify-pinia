@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import { describe, expect, test, beforeEach } from 'vitest'
+import { describe, expect, it, beforeEach } from 'vitest'
 import HelloWorld from '@/components/HelloWorld.vue'
 import { ComponentPublicInstance } from 'vue'
 import { createVuetify } from 'vuetify'
@@ -23,7 +23,7 @@ describe('App.vue', () => {
     //   })
 
 
-      test('should mount', async () => {
+      it('should mount', async () => {
         const helloTitle = wrapper.find('[data-testid="hello-title"]')
         expect(helloTitle.text()).toContain('Welcome to Vuetify 3 Beta 15')
 
