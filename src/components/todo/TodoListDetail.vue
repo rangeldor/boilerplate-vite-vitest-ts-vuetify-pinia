@@ -1,8 +1,12 @@
 <template>
-  <v-card>
-    <h1 class="text-primary">
-      Todo Detalhes
-    </h1>
+  <v-card width="100%" >
+    <v-card-header>
+      <v-card-title>
+      <h1 class="text-primary">
+        Todo Detalhes
+      </h1>
+    </v-card-title>
+    </v-card-header>
     <v-card-text>
       <div class="d-flex justify-center align-start flex-column">
         <div>

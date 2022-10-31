@@ -1,20 +1,23 @@
 <template>
-  <v-card
-    class="mx-auto px-6 py-8"
-    max-width="344"
+  <v-card   
+    width="100%"
   >
-    <v-card-title>
+    <v-card-header>
+      <v-card-title>
       <h1 class="text-primary">
         Create Todo
       </h1>
     </v-card-title>
+    </v-card-header>
 
-    <v-form
+    <v-card-text>
+      <v-form
       v-model="form"
       @submit.prevent="onSubmit"
     >
       <v-text-field
         v-model="todoForm.title"
+        hide-details
         class="mb-2"
         clearable
         label="Título"
@@ -23,6 +26,7 @@
 
       <v-checkbox
         v-model="todoForm.completed"
+        hide-details
         label="Completo?"
         data-testid="todo-create-completed"
       />
@@ -40,6 +44,7 @@
         Criar
       </v-btn>
     </v-form>
+    </v-card-text>
   </v-card>
 </template>
 
