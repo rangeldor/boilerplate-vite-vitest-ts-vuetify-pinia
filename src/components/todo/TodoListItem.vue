@@ -14,7 +14,7 @@
         data-testid="todo-detail-button"
         class="ma-1"
         variant="text"
-        icon="mdi-eye-outline"
+        icon="fas fa-eye"
         color="primary"
         @click="handleDetail"
       />
@@ -44,7 +44,7 @@
 import { computed, toRefs } from 'vue'
 import { ITodo, useTodoStore } from '@/stores/todo'
 
-const useTodo = useTodoStore()
+const todoStore = useTodoStore()
 
 interface ITodoListItemProps {
   todoItem: ITodo
@@ -56,7 +56,7 @@ const icon = computed(() => todoItem.value.completed ? 'mdi-check' : 'mdi-close'
 const iconColor = computed(() => todoItem.value.completed ? 'green' : 'red')
 
 const handleDetail = () => {
-  useTodo.todo = todoItem.value
-  useTodo.openDetailDialog = !useTodo.openDetailDialog
+  todoStore.todo = todoItem.value
+  todoStore.openDetailDialog = !todoStore.openDetailDialog
 }
 </script>
