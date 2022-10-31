@@ -2,7 +2,7 @@
   <v-card width="100%" >
     <v-card-header>
       <v-card-title>
-      <h1 class="text-primary">
+      <h1 class="test__title--color">
         Todo Detalhes
       </h1>
     </v-card-title>
@@ -31,7 +31,19 @@
 
 <script setup lang="ts">
 import { useTodoStore } from '@/stores/todo'
+// import { useTheme } from 'vuetify'
 
 const { todo } = useTodoStore()
-
+// const theme = useTheme()
+// const color = theme.themes.value.light.colors.primary
 </script>
+
+<style lang="scss" scoped>
+.test {
+  &__title {
+    &--color {
+      color: rgb(var(--v-theme-primary));
+    }
+  }  
+}
+</style>
