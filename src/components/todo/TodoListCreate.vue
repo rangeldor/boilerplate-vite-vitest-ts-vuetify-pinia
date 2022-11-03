@@ -1,49 +1,49 @@
 <template>
-  <v-card   
+  <v-card
     width="100%"
   >
     <v-card-header>
       <v-card-title>
-      <h1 class="text-primary">
-        Create Todo
-      </h1>
-    </v-card-title>
+        <h1 class="text-primary">
+          Create Todo
+        </h1>
+      </v-card-title>
     </v-card-header>
 
     <v-card-text>
       <v-form
-      v-model="form"
-      @submit.prevent="onSubmit"
-    >
-      <v-text-field
-        v-model="todoForm.title"
-        hide-details
-        class="mb-2"
-        clearable
-        label="Título"
-        data-testid="todo-create-title"
-      />
-
-      <v-checkbox
-        v-model="todoForm.completed"
-        hide-details
-        label="Completo?"
-        data-testid="todo-create-completed"
-      />
-      <br>
-
-      <v-btn
-        :disabled="!form"
-        :loading="isLoading"
-        block
-        color="primary"
-        size="large"
-        type="submit"
-        variant="elevated"
+        v-model="form"
+        @submit.prevent="onSubmit"
       >
-        Criar
-      </v-btn>
-    </v-form>
+        <v-text-field
+          v-model="todoForm.title"
+          hide-details
+          class="mb-2"
+          clearable
+          label="Título"
+          data-testid="todo-create-title"
+        />
+
+        <v-checkbox
+          v-model="todoForm.completed"
+          hide-details
+          label="Completo?"
+          data-testid="todo-create-completed"
+        />
+        <br>
+
+        <v-btn
+          :disabled="!form"
+          :loading="isLoading"
+          block
+          color="primary"
+          size="large"
+          type="submit"
+          variant="elevated"
+        >
+          Criar
+        </v-btn>
+      </v-form>
     </v-card-text>
   </v-card>
 </template>

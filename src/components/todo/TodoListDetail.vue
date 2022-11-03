@@ -1,11 +1,11 @@
 <template>
-  <v-card width="100%" >
+  <v-card width="100%">
     <v-card-header>
       <v-card-title>
-      <h1 class="test__title--color">
-        Todo Detalhes
-      </h1>
-    </v-card-title>
+        <h1 class="test__title--color">
+          Todo Detalhes
+        </h1>
+      </v-card-title>
     </v-card-header>
     <v-card-text>
       <div class="d-flex justify-center align-start flex-column">
@@ -44,6 +44,6 @@ const { todo } = useTodoStore()
     &--color {
       color: rgb(var(--v-theme-primary));
     }
-  }  
+  }
 }
 </style>

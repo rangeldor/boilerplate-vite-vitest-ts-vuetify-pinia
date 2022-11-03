@@ -3,8 +3,8 @@ export enum RouteName {
     SignIn = 'SignIn',
     Home = 'Home'
   }
-  
-  export enum RoutePath {
+
+export enum RoutePath {
     NotFound = '/:pathMatch(.*)*',
     SignIn = '/signin',
     Home = '/'

@@ -57,15 +57,15 @@
     </v-table>
   </v-card>
   <v-dialog
-    max-width="600"
     v-model="useTodo.openDetailDialog"
+    max-width="600"
   >
     <TodoListDetail />
   </v-dialog>
 
   <v-dialog
-    max-width="600"
     v-model="useTodo.openCreateDialog"
+    max-width="600"
   >
     <TodoListCreate />
   </v-dialog>

@@ -13,7 +13,7 @@ export const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-  scrollBehavior () {
+  scrollBehavior() {
     return {
       top: 0,
       behavior: 'smooth'

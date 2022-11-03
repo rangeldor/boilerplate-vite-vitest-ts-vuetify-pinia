@@ -37,7 +37,7 @@ describe('TodoListCreate.vue', () => {
     expect(completed.element.checked).toBeTruthy()
     await wrapper.find('form').trigger('submit.prevent')
     console.log(wrapper.vm.todoForm)
-    
+
     // expect(useTodo.create()).toHaveBeenCalled()
   })
 })
