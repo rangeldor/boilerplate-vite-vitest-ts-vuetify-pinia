@@ -1,11 +1,9 @@
 <template>
     <div>
-        <v-main>
       <h1 class="text-primary">
       Todo List - JSON Placeholder
     </h1>
-<TodoList />
-    </v-main>
+    <TodoList />
     </div>
 </template>
 
