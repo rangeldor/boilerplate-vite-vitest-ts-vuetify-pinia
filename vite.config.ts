@@ -2,11 +2,8 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import eslint from 'vite-plugin-eslint'
-
-// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
 import vuetify from 'vite-plugin-vuetify'
 
-// https://vitejs.dev/config/
 export default defineConfig(() => {
 	const env = { ...process.env }
 
@@ -16,7 +13,9 @@ export default defineConfig(() => {
 		},
 		plugins: [
 			vue(),
-			vuetify({ autoImport: true }),
+			vuetify({
+				autoImport: true
+			}),
 			eslint()
 		],
 		resolve: {
