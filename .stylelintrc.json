@@ -1,0 +1,19 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-standard-vue/scss"],
+  "customSyntax": "postcss-scss",
+  "overrides": [
+    {
+      "files": ["**/*.vue"],
+      "customSyntax": "postcss-html"
+    }
+  ],
+  "rules": {
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": ["v-deep"]
+      }
+    ],
+    "value-keyword-case": ["lower", {"ignoreFunctions": ["v-bind"]}]
+  }
+}

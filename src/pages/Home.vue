@@ -11,7 +11,3 @@
 import TodoList from '@/components/todo/TodoList.vue'
 
 </script>
-
-<style scoped>
-
-</style>
