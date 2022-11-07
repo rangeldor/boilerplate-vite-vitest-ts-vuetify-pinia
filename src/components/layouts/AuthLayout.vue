@@ -30,7 +30,7 @@
 </template>
   
 <script lang="ts" setup>
-  import { useTheme } from 'vuetify'
+import { useTheme } from 'vuetify'
 
 const theme = useTheme()
 theme.themes.value.light.colors.background = '#041E42'
