@@ -19,6 +19,18 @@
     Criar Todo
   </v-btn>
 
+  <v-btn
+    color="secondary"
+    class="my-3 text-primary"
+    @click.prevent="handleCreate"
+  >
+    <v-icon
+      start
+      icon="mdi-plus-circle"
+    />
+    Criar Todo secundario
+  </v-btn>
+
   <v-card :disabled="useTodo.isLoading">
     <v-progress-linear
       v-if="useTodo.isLoading"

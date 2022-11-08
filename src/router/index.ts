@@ -3,6 +3,7 @@ import { RouteName, RoutePath } from '@/enums/route'
 
 const AuthLayout = () => import(/* webpackChunkName: "AuthLayout" */ '@/components/layouts/AuthLayout.vue')
 const SignIn = () => import(/* webpackChunkName: "SignIn" */ '@/pages/auth/SignIn.vue')
+const DashboardLayout = () => import(/* webpackChunkName: "DashboardLayout" */ '@/components/layouts/DashboardLayout.vue')
 const Home = () => import(/* webpackChunkName: "Home" */ '@/pages/Home.vue')
 
 export const routes: Array<RouteRecordRaw> = [
@@ -19,9 +20,16 @@ export const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
-    path: RoutePath.Home,
-    name: RouteName.Home,
-    component: Home
+    path: '/',
+    component: DashboardLayout,
+    children: [
+      {
+        path: RoutePath.Home,
+        name: RouteName.Home,
+        component: Home,
+        meta: { toTop: true, smoothScroll: true }
+      }
+    ]
   }
 ]
 

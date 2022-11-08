@@ -27,10 +27,10 @@ export default createVuetify({
       light: {
         colors: {
           background: '#F7F7F7',
-          primary: '#43807a',
-          secondary: '#5CBBF6',
-          tertiary: '#E57373',
-          accent: '#005CAF'
+          primary: '#E35205',
+          secondary: '#FDEEE6',
+          tertiary: '#000000',
+          accent: '#041E42'
         }
       }
     }

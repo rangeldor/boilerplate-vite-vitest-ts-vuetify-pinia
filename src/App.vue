@@ -1,13 +1,9 @@
 <template>
-  <v-app>
-    <v-main>
-      <router-view v-slot="{ Component }">
-        <transition name="fade">
-          <component :is="Component" />
-        </transition>
-      </router-view>
-    </v-main>
-  </v-app>
+  <router-view v-slot="{ Component }">
+    <transition name="fade">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 
 <style lang="scss">
