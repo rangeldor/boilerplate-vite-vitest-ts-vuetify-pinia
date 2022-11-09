@@ -1,10 +1,18 @@
 <template>
+  <GlobalPreloader />
+  <Notify />
   <router-view v-slot="{ Component }">
     <transition name="fade">
       <component :is="Component" />
     </transition>
   </router-view>
 </template>
+
+<script setup lang="ts">
+import Notify from '@/components/notify/Notify.vue'
+import GlobalPreloader from '@/components/preloader/GlobalPreloader.vue'
+
+</script>
 
 <style lang="scss">
 html {
