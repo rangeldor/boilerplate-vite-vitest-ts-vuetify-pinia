@@ -22,13 +22,13 @@
   <v-btn
     color="secondary"
     class="my-3 text-primary"
-    @click.prevent="handleCreate"
+    @click.prevent="handleSnackbar"
   >
     <v-icon
       start
       icon="mdi-plus-circle"
     />
-    Criar Todo secundario
+    Abrir snackbar
   </v-btn>
 
   <v-card :disabled="useTodo.isLoading">
@@ -84,19 +84,25 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from 'vue'
+// import { onMounted } from 'vue'
 import { useTodoStore } from '@/stores/todo'
 import TodoListItem from './TodoListItem.vue'
 import TodoListDetail from './TodoListDetail.vue'
 import TodoListCreate from './TodoListCreate.vue'
+import { useSnackbar } from '@/composables/useSnackbar'
 
 const useTodo = useTodoStore()
+const snackbar = useSnackbar()
 
-onMounted(async () => {
-  await useTodo.fetchAll()
-})
+// onMounted(async () => {
+//   await useTodo.fetchAll()
+// })
 
 const handleCreate = () => {
   useTodo.openCreateDialog = !useTodo.openCreateDialog
+}
+
+const handleSnackbar = () => {
+  snackbar.success('teste sucesso', 60000)
 }
 </script>
