@@ -1,12 +1,19 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import { RouteName, RoutePath } from '@/enums/route'
 
+const NotFound = () => import(/* webpackChunkName: "NotFound" */ '@/pages/dashboard/NotFound.vue')
 const AuthLayout = () => import(/* webpackChunkName: "AuthLayout" */ '@/components/layouts/AuthLayout.vue')
 const SignIn = () => import(/* webpackChunkName: "SignIn" */ '@/pages/auth/SignIn.vue')
 const DashboardLayout = () => import(/* webpackChunkName: "DashboardLayout" */ '@/components/layouts/DashboardLayout.vue')
-const Home = () => import(/* webpackChunkName: "Home" */ '@/pages/Home.vue')
+const Home = () => import(/* webpackChunkName: "Home" */ '@/pages/dashboard/Home.vue')
 
 export const routes: Array<RouteRecordRaw> = [
+  {
+    path: RoutePath.NotFound,
+    name: RouteName.NotFound,
+    component: NotFound,
+    meta: { toTop: true, smoothScroll: true }
+  },
   {
     path: '/auth',
     component: AuthLayout,
