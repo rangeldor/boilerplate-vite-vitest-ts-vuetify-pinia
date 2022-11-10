@@ -4,7 +4,7 @@
     :class="`global-preloader ${animated} ${zoomOut}`"
   >
     <v-progress-linear
-      color="#b01a1a"
+      color="primary"
       height="5"
       indeterminate
     />
@@ -52,7 +52,7 @@
     width: 100%;
     height: 100%;
     opacity: v-bind(opacity);
-    background-color: #fbfbfb;
+    background-color: "#0C0B0A";
     z-index: 9999;
   }
 
