@@ -21,7 +21,7 @@
 
   <v-btn
     color="secondary"
-    class="my-3 text-primary"
+    class="my-3"
     @click.prevent="handleSnackbar"
   >
     <v-icon
