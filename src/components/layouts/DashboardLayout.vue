@@ -3,11 +3,12 @@
     full-height
     :theme="theme"
   >
+    <Notify />
+
     <!-- <Drawer :toogle-drawer="drawer" /> -->
   
     <v-app-bar
       elevation="1"
-      color="accent"
     >
       <v-app-bar-nav-icon @click.prevent="toogleDrawer" />
   
@@ -47,9 +48,10 @@
   
 <script lang="ts" setup>
 import { ref } from 'vue'
+import Notify from '@/components/notify/Notify.vue'
 //   import Drawer from '@/components/sidebar/Drawer.vue'
 
-const theme = ref<string>('light')
+const theme = ref<string>('dark')
 const drawer = ref<boolean>(true)
 const toogleDrawer = () => {
     drawer.value = !drawer.value

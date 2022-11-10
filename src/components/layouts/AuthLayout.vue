@@ -1,5 +1,6 @@
 <template>
-  <v-app>
+  <v-app :theme="theme">
+    <Notify />
     <v-main>
       <v-container class="auth">
         <v-card
@@ -30,10 +31,10 @@
 </template>
   
 <script lang="ts" setup>
-import { useTheme } from 'vuetify'
+import { ref } from 'vue'
+import Notify from '@/components/notify/Notify.vue'
 
-const theme = useTheme()
-theme.themes.value.light.colors.background = '#041E42'
+const theme = ref<string>('dark')
 </script>
   
 <style lang="scss" scoped>
