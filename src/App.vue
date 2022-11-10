@@ -1,6 +1,6 @@
 <template>
   <GlobalPreloader />
-  <Notify />
+
   <router-view v-slot="{ Component }">
     <transition name="fade">
       <component :is="Component" />
@@ -9,7 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import Notify from '@/components/notify/Notify.vue'
 import GlobalPreloader from '@/components/preloader/GlobalPreloader.vue'
 
 </script>
@@ -46,7 +45,7 @@ body {
 }
 
 input:-webkit-autofill {
-  box-shadow: 0 0 0 1000px #fff inset !important;
+  box-shadow: 0 0 0 1000px #000 inset !important;
 }
 
 ::-webkit-scrollbar {
