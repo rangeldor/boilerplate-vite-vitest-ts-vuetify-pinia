@@ -1,14 +1,13 @@
 <template>
   <v-snackbar
     v-model="active"
-    color="background"
+    :color="type"
     location="right top"
     :timeout="timeout"
   >
     <div class="d-flex justify-start align-center">
       <v-icon
-        :icon="icon"
-        :color="type"
+        :icon="iconName"
         class="mr-2"
       />
       <span>{{ description }}</span>
@@ -18,8 +17,8 @@
 
 <script setup lang="ts">
 import { useSnackbar } from '@/composables/useSnackbar'
-import { computed } from 'vue';
-// import { useTheme } from 'vuetify'
+import { computed } from 'vue'
+
 const { active, type, timeout, description } = useSnackbar()
 
 const iconType = {
@@ -28,7 +27,7 @@ const iconType = {
     info: 'fas fa-circle-info',
     warning: 'fas fa-circle-exclamation',
 }
-const icon = computed(() => iconType[type.value])
+const iconName = computed(() => iconType[type.value])
 
 // const theme = useTheme()
 // const snackbarBorderColorType = {
