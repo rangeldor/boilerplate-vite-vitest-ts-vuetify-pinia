@@ -1,10 +1,10 @@
-import { Ref, ref } from "vue"
-import { SnackbarType } from '@/enums/snackbar'
+import { Ref, ref, readonly } from "vue"
+import { StatusType } from '@/enums/status'
 
 interface ISnackbarComposable {
     active: Ref<boolean>
     description: Ref<string>
-    type: Ref<SnackbarType>
+    type: Ref<StatusType>
     timeout: Ref<number>
     success(descriptionValue: string, timeoutValue?: number): void
     warning(descriptionValue: string, timeoutValue?: number): void
@@ -14,11 +14,11 @@ interface ISnackbarComposable {
 // Colocar ReadOnly
 const active = ref<boolean>(false)
 const description = ref<string>('')
-const type = ref<SnackbarType>(SnackbarType.SUCCESS)
+const type = ref<StatusType>(StatusType.SUCCESS)
 const timeout = ref<number>(2000)
 
 export function useSnackbar(): ISnackbarComposable {
-    const show = (descriptionValue: string, typeValue: SnackbarType, timeoutValue?: number) => {
+    const show = (descriptionValue: string, typeValue: StatusType, timeoutValue?: number) => {
         description.value = descriptionValue
         timeout.value = timeoutValue ?? 2000
         type.value = typeValue
@@ -26,19 +26,19 @@ export function useSnackbar(): ISnackbarComposable {
     }
 
     const success = (descriptionValue: string, timeoutValue?: number) => {
-        show(descriptionValue, SnackbarType.SUCCESS, timeoutValue)
+        show(descriptionValue, StatusType.SUCCESS, timeoutValue)
     }
 
     const warning = (descriptionValue: string, timeoutValue?: number) => {
-        show(descriptionValue, SnackbarType.WARNING, timeoutValue)
+        show(descriptionValue, StatusType.WARNING, timeoutValue)
     }
 
     const info = (descriptionValue: string, timeoutValue?: number) => {
-        show(descriptionValue, SnackbarType.INFO, timeoutValue)
+        show(descriptionValue, StatusType.INFO, timeoutValue)
     }
 
     const error = (descriptionValue: string, timeoutValue?: number) => {
-        show(descriptionValue, SnackbarType.ERROR, timeoutValue)
+        show(descriptionValue, StatusType.ERROR, timeoutValue)
     }
 
     return { active, timeout, type, description, success, warning, info, error }
