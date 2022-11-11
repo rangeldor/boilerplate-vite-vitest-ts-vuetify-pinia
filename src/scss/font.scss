@@ -1,0 +1,13 @@
+@font-face {
+  font-family: ScaniaSans;
+  font-weight: bold;
+  font-style: normal;
+  src: local("ScaniaSans-Bold"), url("@/assets/fonts/ScaniaSans-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: ScaniaSans;
+  font-weight: normal;
+  font-style: normal;
+  src: local("ScaniaSans-Regular"), url("@/assets/fonts/ScaniaSans-Regular.otf") format("truetype");
+}

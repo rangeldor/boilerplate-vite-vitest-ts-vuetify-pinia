@@ -1,15 +1,11 @@
 import '@mdi/font/css/materialdesignicons.css'
 import '@fortawesome/fontawesome-free/css/all.css'
-import 'vuetify/styles'
+// import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import { aliases, fa } from 'vuetify/iconsets/fa'
 import { mdi } from 'vuetify/iconsets/mdi'
 import { md } from 'vuetify/iconsets/md'
 import { mdi as mdiSvg } from 'vuetify/iconsets/mdi-svg'
-
-// Misc
-import { loadFonts } from './webfontloader'
-loadFonts()
 
 export default createVuetify({
   icons: {
