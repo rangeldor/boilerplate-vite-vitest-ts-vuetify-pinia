@@ -1,6 +1,5 @@
 <template>
-  <v-app :theme="theme">
-    <Notify />
+  <v-app :theme="theme">    
     <v-main>
       <v-container class="auth">
         <v-card
@@ -32,7 +31,6 @@
   
 <script lang="ts" setup>
 import { ref } from 'vue'
-import Notify from '@/components/notify/Notify.vue'
 
 const theme = ref<string>('dark')
 </script>

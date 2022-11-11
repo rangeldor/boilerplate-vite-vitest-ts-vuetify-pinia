@@ -3,8 +3,6 @@
     full-height
     :theme="theme"
   >
-    <Notify />
-
     <!-- <Drawer :toogle-drawer="drawer" /> -->
   
     <v-app-bar
@@ -48,7 +46,6 @@
   
 <script lang="ts" setup>
 import { ref } from 'vue'
-import Notify from '@/components/notify/Notify.vue'
 //   import Drawer from '@/components/sidebar/Drawer.vue'
 
 const theme = ref<string>('dark')
