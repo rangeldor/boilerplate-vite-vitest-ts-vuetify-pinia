@@ -1,4 +1,4 @@
-import { Ref, ref, readonly } from "vue"
+import { Ref, ref } from "vue"
 import { StatusType } from '@/enums/status'
 
 interface ISnackbarComposable {
