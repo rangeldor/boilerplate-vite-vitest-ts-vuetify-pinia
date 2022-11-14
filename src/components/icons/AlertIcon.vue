@@ -1,5 +1,8 @@
 <template>
-  <v-avatar :color="colorName">
+  <v-avatar
+    :color="colorName"
+    size="large"
+  >
     <v-icon
       :color="type"
       :icon="iconName"
@@ -27,6 +30,7 @@ const iconType = {
     info: 'fas fa-circle-info',
     warning: 'fas fa-circle-exclamation',
 }
+const iconName = computed(() => iconType[type.value])
 
 const colorType = {
     success: 'rgba(69, 196, 96,0.14)',
@@ -34,7 +38,6 @@ const colorType = {
     info: 'rgba(33,150,243,0.25)',
     warning: 'rgba(251, 164, 34,0.19)',
 }
-
-const iconName = computed(() => iconType[type.value])
 const colorName = computed(() => colorType[type.value])
+
 </script>
