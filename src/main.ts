@@ -5,7 +5,6 @@ import router from './router'
 import vuetify from './plugins/vuetify'
 import 'animate.css'
 
-
 const pinia = createPinia()
 
 createApp(App)
