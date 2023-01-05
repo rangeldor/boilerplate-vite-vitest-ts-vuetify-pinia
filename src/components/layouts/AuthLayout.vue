@@ -1,38 +1,24 @@
 <template>
-  <v-app :theme="theme">    
+  <v-app>    
     <v-main>
       <v-container class="auth">
-        <v-card
-          class="rounded-tr-0 rounded-tl-xl rounded-bl-0 rounded-br-xl overflow-hidden"
-          max-width="550"
-          width="100%"
-          elevation="3"
-        >  
-          <v-card-header class="d-flex justify-center align-center my-4">
-            Logo
-          </v-card-header>
-          <v-card-content>
-            <router-view
-              v-slot="{ Component }"
-            >
-              <transition
-                name="scale"
-                mode="out-in"
-              >
-                <component :is="Component" />
-              </transition>
-            </router-view>
-          </v-card-content>
-        </v-card>
+        <router-view
+          v-slot="{ Component }"
+        >
+          <transition
+            name="scale"
+            mode="out-in"
+          >
+            <component :is="Component" />
+          </transition>
+        </router-view>
       </v-container>
     </v-main>
   </v-app>
 </template>
   
 <script lang="ts" setup>
-import { ref } from 'vue'
 
-const theme = ref<string>('dark')
 </script>
   
 <style lang="scss" scoped>
@@ -44,9 +30,5 @@ const theme = ref<string>('dark')
   max-height: 100%;
   height: 100vh;
   width: 100vw;
-
-  &__logo {
-    height: 50px;
-  }
 }
 </style>

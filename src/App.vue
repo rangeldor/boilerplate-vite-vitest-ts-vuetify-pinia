@@ -3,6 +3,12 @@
 
   <Notify />
 
+  <Alert />
+
+  <Proposal />
+
+  <Justify />
+
   <router-view v-slot="{ Component }">
     <transition name="fade">
       <component :is="Component" />
@@ -13,6 +19,9 @@
 <script setup lang="ts">
 import GlobalPreloader from '@/components/preloader/GlobalPreloader.vue'
 import Notify from '@/components/notify/Notify.vue'
+import Alert from '@/components/alert/Alert.vue'
+import Proposal from '@/components/alert/Proposal.vue'
+import Justify from '@/components/alert/Justify.vue'
 
 </script>
 
@@ -48,7 +57,7 @@ body {
 }
 
 input:-webkit-autofill {
-  box-shadow: 0 0 0 1000px #000 inset !important;
+  box-shadow: 0 0 0 1000px rgb(var(--v-theme-input-autofill)) inset !important;
 }
 
 ::-webkit-scrollbar {
@@ -56,16 +65,16 @@ input:-webkit-autofill {
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+  box-shadow: inset 0 0 6px rgb(255 255 255 / 10%);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  box-shadow: inset 0 0 6px rgb(0 0 0 / 50%);
+  box-shadow: inset 0 0 6px rgb(255 255 255 / 30%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ccc;
+  background: rgb(var(--v-theme-input-scrollbar));
 }
 </style>

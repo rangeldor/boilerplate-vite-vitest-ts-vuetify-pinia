@@ -29,21 +29,4 @@ const iconType = {
 }
 const iconName = computed(() => iconType[type.value])
 
-// const theme = useTheme()
-// const snackbarBorderColorType = {
-//     success: theme.themes.value.light.colors.success,
-//     error: theme.themes.value.light.colors.error,
-//     info: theme.themes.value.light.colors.info,
-//     warning: theme.themes.value.light.colors.warning,
-// }
-// const snackbarBorderColor = computed(() => snackbarBorderColorType[type.value])
-
 </script>
-
-<!-- <style lang="scss">
-.v-snackbar {
-  &__wrapper {
-    border-bottom: 4px solid v-bind(snackbarBorderColor);
-  }
-}
-</style> -->

@@ -1,4 +1,4 @@
-# Scania SDeal
+# Scania SDeal Dashboard
 
 ## Project setup
 

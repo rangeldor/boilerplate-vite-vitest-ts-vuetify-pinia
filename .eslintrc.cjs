@@ -16,8 +16,8 @@ module.exports = {
     },
     plugins: [],
     rules: {
-        "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-        "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+        "no-console": process.env.VITE_NODE_ENV === "production" ? "warn" : "off",
+        "no-debugger": process.env.VITE_NODE_ENV === "production" ? "warn" : "off",
         "@typescript-eslint/no-var-requires": 0,
         "@typescript-eslint/no-explicit-any": 0,
         "vue/multi-word-component-names": 0

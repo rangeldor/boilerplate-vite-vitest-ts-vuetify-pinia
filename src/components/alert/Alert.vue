@@ -20,7 +20,7 @@
           color="primary"
           class="text-capitalize px-10"
           rounded="pill"
-          @click.prevent="toogle"
+          @click.prevent="toggle"
         >
           Continuar
         </v-btn>
@@ -33,6 +33,6 @@
 import { useAlert } from '@/composables/useAlert'
 import AlertIcon from '@/components/icons/AlertIcon.vue'
 
-const { active, type, title, description, toogle } = useAlert()
+const { active, type, title, description, toggle } = useAlert()
 
 </script>

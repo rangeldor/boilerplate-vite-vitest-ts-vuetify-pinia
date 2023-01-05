@@ -6,7 +6,7 @@ interface IAlertComposable {
     title: Ref<string>
     description: Ref<string>
     type: Ref<StatusType>
-    toogle(): void
+    toggle(): void
     approved(): void
     disapproved(): void
     error(): void
@@ -26,7 +26,7 @@ export function useAlert(): IAlertComposable {
         active.value = true
     }
 
-    const toogle = () => {
+    const toggle = () => {
         active.value = !active.value
     }
 
@@ -51,5 +51,5 @@ export function useAlert(): IAlertComposable {
         show(title, description, StatusType.WARNING)
     }
 
-    return { active, type, title, description, toogle, approved, disapproved, error }
+    return { active, type, title, description, toggle, approved, disapproved, error }
 }

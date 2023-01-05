@@ -1,4 +1,5 @@
 import '@mdi/font/css/materialdesignicons.css'
+import 'vuetify/styles'
 import '@fortawesome/fontawesome-free/css/all.css'
 import { createVuetify } from 'vuetify'
 import { aliases, fa } from 'vuetify/iconsets/fa'
@@ -18,7 +19,7 @@ export default createVuetify({
     }
   },
   theme: {
-    dark: true,
+    defaultTheme: 'dark',
     themes: {
       light: {
         colors: {
@@ -27,7 +28,10 @@ export default createVuetify({
           primary: '#E35205',
           secondary: '#FDEEE6',
           tertiary: '#000000',
-          accent: '#041E42'
+          accent: '#041E42',
+          error: '#B00020',
+          scrollbar : '#212121',
+          'input-autofill': '#ffffff'
         }
       },
       dark: {
@@ -37,7 +41,12 @@ export default createVuetify({
           primary: '#E35205',
           secondary: '#53565A',
           tertiary: '#000000',
-          accent: '#0C0B0A'
+          accent: '#0C0B0A',
+          error: '#B00020',
+          'microleaning-background': '#252423',
+          'microleaning-title': '#181716',
+          scrollbar : '#212121',
+          'input-autofill': '#212121'
         }
       }
     }

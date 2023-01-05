@@ -1,33 +1,29 @@
 <template>
-  <v-app
-    full-height
-    :theme="theme"
-  >
-    <Alert />
-
-    <!-- <Drawer :toogle-drawer="drawer" /> -->
+  <v-app full-height>
+    <Drawer :toogle-drawer="drawer" />
   
     <v-app-bar
       elevation="1"
     >
-      <v-app-bar-nav-icon @click.prevent="toogleDrawer" />
+      <v-app-bar-nav-icon @click.prevent="toggleDrawer" />
   
       <v-app-bar-title>
-        Logo
+        {{ pageName }}
       </v-app-bar-title>
 
       <v-responsive>
-        Sdeal
+        SDeal
       </v-responsive>
   
       <template #append>
-        Bem vindo
-        <v-avatar>
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/john.jpg"
-            alt="John"
-          />
-        </v-avatar>
+        <div class="d-flex justify-center align-center">
+          <span class="mr-1">Bem vindo(a)</span>
+          <strong class="mr-2">{{ userStore.user.name }}</strong>
+
+          <v-avatar color="primary">
+            <span class="text-uppercase">{{ userStore.userInitials }}</span>
+          </v-avatar>
+        </div>
       </template>
     </v-app-bar>
   
@@ -47,15 +43,21 @@
 </template>
   
 <script lang="ts" setup>
-import { ref } from 'vue'
-//   import Drawer from '@/components/sidebar/Drawer.vue'
-import Alert from '@/components/alert/Alert.vue'
+import { computed, ref } from 'vue'
+import Drawer from '@/components/sidebar/Drawer.vue'
+import { useRoute } from 'vue-router'
+import { useUserStore } from '@/stores/user'
 
-const theme = ref<string>('dark')
+const userStore = useUserStore()
+
 const drawer = ref<boolean>(true)
-const toogleDrawer = () => {
+const toggleDrawer = () => {
     drawer.value = !drawer.value
 }
+
+const route = useRoute()
+const pageName = computed(() => route.meta.translatedName)
+
 </script>
   
 <style lang="scss" scoped>

@@ -1,0 +1,13 @@
+<template>
+  <v-card
+    class="pa-3"
+    elevation="3"
+  >  
+    <v-progress-circular
+      color="white"
+      indeterminate
+      :size="60"
+      :width="8"
+    />
+  </v-card>
+</template>

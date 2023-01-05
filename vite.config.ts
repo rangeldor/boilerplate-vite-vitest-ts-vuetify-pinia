@@ -1,11 +1,11 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import eslint from 'vite-plugin-eslint'
 import vuetify from 'vite-plugin-vuetify'
 
-export default defineConfig(() => {
-	const env = { ...process.env }
+export default defineConfig(({ mode }) => {
+	const env = { ...process.env, ...loadEnv(mode, process.cwd()) }
 
 	return {
 		define: {
@@ -18,6 +18,7 @@ export default defineConfig(() => {
 			}),
 			eslint()
 		],
+		base: './',
 		resolve: {
 			alias: {
 				'@': resolve(__dirname, 'src')
